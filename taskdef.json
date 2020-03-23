@@ -26,7 +26,6 @@
    "executionRoleArn": "arn:aws:iam::598780336447:role/ecsTaskExecutionRole",
    "family": "test-site",
    "memory": "512",
-   #"networkMode": "awsvpc",
    "requiresCompatibilities": [ 
        "FARGATE" 
     ]
