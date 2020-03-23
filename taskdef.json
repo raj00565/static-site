@@ -1,41 +1,33 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::598780336447:role/ecsTaskExecutionRole",
-  "containerDefinitions": [
-    {
-      "dnsSearchDomains": null,
-      "logConfiguration": null,
-      "entryPoint": null,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 5000
-        }
-      ],
-      "cpu": 10,
-      "environment": [],
-      "memory": 256,
-      "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_13",
-      "essential": true,
-      "name": "test-site"
-    }
-  ],
-  "placementConstraints": [],
-  "memory": "512",
-  "taskRoleArn": "arn:aws:iam::598780336447:role/ecsTaskExecutionRole",
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:598780336447:task-definition/test-site:2",
-  "family": "test-site",
-  "requiresCompatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
-  "networkMode": "awsvpc",
-  "cpu": "256",
-  "revision": 2,
-  "status": "ACTIVE",
-  }
+   "containerDefinitions": [ 
+      { 
+         
+         "essential": true,
+         "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site",
+         "logConfiguration": { 
+            "logDriver": "awslogs",
+            "options": { 
+               "awslogs-group" : "/ecs/fargate-task-definition",
+               "awslogs-region": "us-east-2",
+               "awslogs-stream-prefix": "ecs"
+            }
+         },
+         "name": "test-site",
+         "portMappings": [ 
+            { 
+               "containerPort": 5000,
+               "hostPort": 80,
+               "protocol": "tcp"
+            }
+         ]
+      }
+   ],
+   "cpu": "256",
+   "executionRoleArn": "arn:aws:iam::598780336447:role/ecsTaskExecutionRole",
+   "family": "test-site",
+   "memory": "512",
+   "networkMode": "awsvpc",
+   "requiresCompatibilities": [ 
+       "FARGATE" 
+    ]
+}
