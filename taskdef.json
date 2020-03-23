@@ -1,9 +1,9 @@
 {
-    "family": "test-site",
+    "family": "site-test",
     "containerDefinitions": [
         {
             "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
-            "name": "test-site",
+            "name": "site-test",
             "cpu": 10,
             "memory": 256,
             "essential": true,
