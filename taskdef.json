@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
-            "name": "site-frn-task",
+            "name": "site-demo",
             "cpu": 10,
             "memory": 512,
             "essential": true,
