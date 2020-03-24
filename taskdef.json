@@ -1,32 +1,18 @@
 {
-   "containerDefinitions": [ 
-      { 
-         
-         "essential": true,
-         "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
-         "logConfiguration": { 
-            "logDriver": "awslogs",
-            "options": { 
-               "awslogs-group" : "/ecs/fargate-task-definition",
-               "awslogs-region": "us-east-2",
-               "awslogs-stream-prefix": "ecs"
-            }
-         },
-         "name": "site-frn-service",
-         "portMappings": [ 
-            { 
-               "containerPort": 80,
-               "hostPort": 80,
-               "protocol": "tcp"
-            }
-         ]
-      }
-   ],
-   "cpu": "256",
-   "executionRoleArn": "arn:aws:iam::598780336447:role/ecsTaskExecutionRole",
-   "family": "site-frn",
-   "memory": "512",
-   "requiresCompatibilities": [ 
-      "EC2"
+    "family": "site-frn",
+    "containerDefinitions": [
+        {
+            "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
+            "name": "site-frn-task",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80
+                }
+            ]
+        }
     ]
 }
