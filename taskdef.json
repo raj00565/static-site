@@ -1,9 +1,9 @@
 {
-    "family": "site-frn",
+    "family": "aws-site",
     "containerDefinitions": [
         {
             "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
-            "name": "site-frn-task",
+            "name": "aws-site-task",
             "cpu": 10,
             "memory": 256,
             "essential": true,
