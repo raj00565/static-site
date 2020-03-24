@@ -3,7 +3,7 @@
       { 
          
          "essential": true,
-         "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site",
+         "image": "598780336447.dkr.ecr.us-east-2.amazonaws.com/test-site:v_%BUILD_NUMBER%",
          "logConfiguration": { 
             "logDriver": "awslogs",
             "options": { 
