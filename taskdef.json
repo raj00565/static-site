@@ -27,7 +27,6 @@
    "family": "site-frn",
    "memory": "512",
    "requiresCompatibilities": [ 
-       "EC2",
       "FARGATE"
     ]
 }
