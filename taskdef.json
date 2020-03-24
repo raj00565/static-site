@@ -28,6 +28,6 @@
    "memory": "512",
    "requiresCompatibilities": [ 
        "EC2",
-      "fargate"
+      "FARGATE"
     ]
 }
